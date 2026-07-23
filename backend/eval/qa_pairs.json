@@ -1,0 +1,18 @@
+[
+  {
+    "question": "What is compound growth and how does it help investing?",
+    "expected_keywords": ["compound", "growth"]
+  },
+  {
+    "question": "How can I manage risk when investing?",
+    "expected_keywords": ["risk"]
+  },
+  {
+    "question": "What is asset allocation and diversification?",
+    "expected_keywords": ["asset allocation", "diversif"]
+  },
+  {
+    "question": "What's the difference between saving and investing?",
+    "expected_keywords": ["saving", "investing"]
+  }
+]

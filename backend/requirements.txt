@@ -1,0 +1,21 @@
+fastapi
+uvicorn[standard]
+sqlalchemy
+psycopg[binary]
+pgvector
+pydantic-settings
+python-dotenv
+
+sentence-transformers
+pymupdf
+requests
+beautifulsoup4
+
+# RAG / LLM — uncomment as you start Phase 1 ingestion work
+# anthropic
+# langchain
+# langchain-community
+
+# Dev
+pytest
+httpx

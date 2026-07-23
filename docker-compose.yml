@@ -1,0 +1,22 @@
+services:
+  db:
+    image: pgvector/pgvector:pg16
+    container_name: invested-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: invested
+      POSTGRES_PASSWORD: invested
+      POSTGRES_DB: invested
+    ports:
+      - "5433:5432"
+    volumes:
+      - invested_pgdata:/var/lib/postgresql/data
+      - ./db/init:/docker-entrypoint-initdb.d
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U invested"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  invested_pgdata:
