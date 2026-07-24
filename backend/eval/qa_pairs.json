@@ -46,5 +46,57 @@
   {
     "question": "How does dollar-cost averaging help avoid poor investment timing?",
     "expected_keywords": ["lump-sum", "poorly timed"]
+  },
+  {
+    "question": "What are some common types of investment assets?",
+    "expected_keywords": ["stocks", "bonds"]
+  },
+  {
+    "question": "Why is knowing your risk tolerance important when investing?",
+    "expected_keywords": ["risk tolerance"]
+  },
+  {
+    "question": "What's the key tax difference between a Traditional and a Roth IRA?",
+    "expected_keywords": ["deduct"]
+  },
+  {
+    "question": "Can you contribute to an IRA at any age?",
+    "expected_keywords": ["age", "taxable compensation"]
+  },
+  {
+    "question": "What is the deadline for completing an indirect IRA rollover?",
+    "expected_keywords": ["60-day", "60 day"]
+  },
+  {
+    "question": "Can I recharacterize an IRA contribution from one type to another?",
+    "expected_keywords": ["recharacteriz"]
+  },
+  {
+    "question": "What is a safe harbor 401(k) plan?",
+    "expected_keywords": ["safe harbor"]
+  },
+  {
+    "question": "What is a SIMPLE 401(k) plan?",
+    "expected_keywords": ["SIMPLE 401"]
+  },
+  {
+    "question": "Are 401(k) elective deferrals subject to vesting?",
+    "expected_keywords": ["vest"]
+  },
+  {
+    "question": "What is automatic enrollment in a 401(k) plan?",
+    "expected_keywords": ["enroll"]
+  },
+  {
+    "question": "How does employer matching work in a 401(k)?",
+    "expected_keywords": ["match"]
+  },
+  {
+    "question": "Is there a limit on employee compensation used to calculate 401(k) contributions?",
+    "expected_keywords": ["compensation limit", "annual compensation"]
+  },
+  {
+    "question": "How does dollar-cost averaging compare to investing a lump sum all at once?",
+    "expected_keywords": ["lump sum"]
   }
 ]
