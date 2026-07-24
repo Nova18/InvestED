@@ -10,11 +10,7 @@ sentence-transformers
 pymupdf
 requests
 beautifulsoup4
-
-# RAG / LLM — uncomment as you start Phase 1 ingestion work
-# anthropic
-# langchain
-# langchain-community
+google-genai
 
 # Dev
 pytest

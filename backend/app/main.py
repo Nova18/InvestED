@@ -1,6 +1,8 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
+from app.api import chat
+
 app = FastAPI(title="InvestED API")
 
 app.add_middleware(
@@ -17,6 +19,4 @@ def health():
     return {"status": "ok"}
 
 
-# TODO(Phase 1): mount routers here, e.g.
-#   from app.api import chat
-#   app.include_router(chat.router, prefix="/api")
+app.include_router(chat.router, prefix="/api")
