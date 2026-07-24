@@ -14,5 +14,37 @@
   {
     "question": "What's the difference between saving and investing?",
     "expected_keywords": ["saving", "investing"]
+  },
+  {
+    "question": "Who is eligible to contribute to a Roth IRA?",
+    "expected_keywords": ["taxable compensation", "modified adjusted gross income"]
+  },
+  {
+    "question": "Are Roth IRA contributions tax deductible?",
+    "expected_keywords": ["deduct"]
+  },
+  {
+    "question": "How much can I contribute to an IRA annually?",
+    "expected_keywords": ["contribute to all of your tradition", "annual contribution"]
+  },
+  {
+    "question": "Can I roll over funds between retirement accounts?",
+    "expected_keywords": ["rollover", "Rollovers"]
+  },
+  {
+    "question": "What is a 401(k) plan?",
+    "expected_keywords": ["profit-sharing", "elective deferral"]
+  },
+  {
+    "question": "Are 401(k) contributions taxed immediately when deferred?",
+    "expected_keywords": ["pre-tax", "not reflected as taxable income", "federal income tax withholding"]
+  },
+  {
+    "question": "What is dollar-cost averaging?",
+    "expected_keywords": ["dollar-cost averaging", "price volatility"]
+  },
+  {
+    "question": "How does dollar-cost averaging help avoid poor investment timing?",
+    "expected_keywords": ["lump-sum", "poorly timed"]
   }
 ]
