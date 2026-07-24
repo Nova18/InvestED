@@ -98,5 +98,25 @@
   {
     "question": "How does dollar-cost averaging compare to investing a lump sum all at once?",
     "expected_keywords": ["lump sum"]
+  },
+  {
+    "question": "What are the three asset classes used in a three-fund portfolio?",
+    "expected_keywords": ["domestic stock", "international stock"]
+  },
+  {
+    "question": "What is the 'age in bonds' rule of thumb for asset allocation?",
+    "expected_keywords": ["age in bonds", "100 minus age"]
+  },
+  {
+    "question": "Should my international stock fund go in a taxable or tax-advantaged account?",
+    "expected_keywords": ["taxable account", "tax-efficient fund placement"]
+  },
+  {
+    "question": "What is a lazy portfolio?",
+    "expected_keywords": ["lazy portfolio", "30-40% bonds"]
+  },
+  {
+    "question": "How many funds does a Vanguard Target Retirement fund actually use?",
+    "expected_keywords": ["four-fund"]
   }
 ]
