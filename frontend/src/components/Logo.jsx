@@ -71,17 +71,19 @@ const WAYPOINTS = [
 ]
 const TIMES = [0, 0.06, 0.3, 0.36, 0.58, 0.64, 1]
 
-// Glow intensity per waypoint (0-1), from each point's actual distance out
-// of the resting position - so the glow genuinely tracks "how far from
-// home," using the same keyframe/times mechanism as the movement itself
-// rather than computing anything per-frame at runtime.
+// Glow intensity per waypoint (0-1). The real distance-from-rest at each
+// waypoint rises quickly (36% of the loop) but falls much more slowly (the
+// remaining 64%, via the long right-edge return leg) - tracking that raw
+// shape made the glow pick up fast but visibly linger bright well past the
+// climb. Mirroring the rise for the fall keeps it anchored to the same
+// waypoints/times (still peaks exactly when farthest) but winds down at
+// the same rate it wound up.
 const distances = WAYPOINTS.map(([x, y]) => Math.hypot(x, y))
 const maxDistance = Math.max(...distances)
 const INTENSITY = distances.map((d) => d / maxDistance)
 
-const INK_RGB = [16, 9, 37] // #100925
-const GLOW_RGB = [66, 133, 255] // bright, clear blue
-
+const INK_RGB = [49, 43, 145] // #312B91
+const GLOW_RGB = [102, 126, 234] // #667EEA
 const mix = (a, b, t) => a.map((v, i) => Math.round(v + (b[i] - v) * t))
 const COLOR_KEYFRAMES = INTENSITY.map((t) => `rgb(${mix(INK_RGB, GLOW_RGB, t).join(',')})`)
 const REST_COLOR = COLOR_KEYFRAMES[0]
