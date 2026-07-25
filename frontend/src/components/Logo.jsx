@@ -71,6 +71,31 @@ const WAYPOINTS = [
 ]
 const TIMES = [0, 0.06, 0.3, 0.36, 0.58, 0.64, 1]
 
+// Glow intensity per waypoint (0-1), from each point's actual distance out
+// of the resting position - so the glow genuinely tracks "how far from
+// home," using the same keyframe/times mechanism as the movement itself
+// rather than computing anything per-frame at runtime.
+const distances = WAYPOINTS.map(([x, y]) => Math.hypot(x, y))
+const maxDistance = Math.max(...distances)
+const INTENSITY = distances.map((d) => d / maxDistance)
+
+const INK_RGB = [16, 9, 37] // #100925
+const GLOW_RGB = [66, 133, 255] // bright, clear blue
+
+const mix = (a, b, t) => a.map((v, i) => Math.round(v + (b[i] - v) * t))
+const COLOR_KEYFRAMES = INTENSITY.map((t) => `rgb(${mix(INK_RGB, GLOW_RGB, t).join(',')})`)
+const REST_COLOR = COLOR_KEYFRAMES[0]
+
+// A drop-shadow around the whole group, not any single shape - blur radius
+// and opacity both ramp with distance-from-rest, so the entire logo reads
+// as "softly energized" together rather than just the traveling piece.
+const GROUP_FILTER_KEYFRAMES = INTENSITY.map(
+  (t) => `drop-shadow(0 0 ${(t * 11).toFixed(1)}px rgba(${GLOW_RGB.join(',')},${(t * 0.85).toFixed(2)}))`
+)
+
+const MOTION_TRANSITION = { type: 'tween', duration: 2.4, repeat: Infinity, ease: 'easeInOut', times: TIMES }
+const IDLE_TRANSITION = { duration: 0.5, ease: 'easeOut' }
+
 export default function Logo({ thinking = false, size = 96, className = '' }) {
   return (
     <svg
@@ -79,24 +104,38 @@ export default function Logo({ thinking = false, size = 96, className = '' }) {
       height={size * ((VIEW_H + PAD * 2) / (VIEW_W + PAD * 2))}
       className={className}
     >
-      <polygon points={BIG_TRIANGLE} fill="none" stroke="var(--color-ink)" strokeWidth="18" />
-      <polygon points={SMALL_TRIANGLE} fill="var(--color-ink)" />
-      <motion.polygon
-        points={SMALL_TRIANGLE}
-        fill="none"
-        stroke="var(--color-ink)"
-        strokeWidth="4"
-        animate={
-          thinking
-            ? { x: WAYPOINTS.map((p) => p[0]), y: WAYPOINTS.map((p) => p[1]) }
-            : { x: 0, y: 0 }
-        }
-        transition={
-          thinking
-            ? { type: 'tween', duration: 2.4, repeat: Infinity, ease: 'easeInOut', times: TIMES }
-            : { duration: 0.5, ease: 'easeOut' }
-        }
-      />
+      <motion.g
+        animate={{ filter: thinking ? GROUP_FILTER_KEYFRAMES : GROUP_FILTER_KEYFRAMES[0] }}
+        transition={thinking ? MOTION_TRANSITION : IDLE_TRANSITION}
+      >
+        <motion.polygon
+          points={BIG_TRIANGLE}
+          fill="none"
+          strokeWidth="18"
+          animate={{ stroke: thinking ? COLOR_KEYFRAMES : REST_COLOR }}
+          transition={thinking ? MOTION_TRANSITION : IDLE_TRANSITION}
+        />
+        <motion.polygon
+          points={SMALL_TRIANGLE}
+          animate={{ fill: thinking ? COLOR_KEYFRAMES : REST_COLOR }}
+          transition={thinking ? MOTION_TRANSITION : IDLE_TRANSITION}
+        />
+        <motion.polygon
+          points={SMALL_TRIANGLE}
+          fill="none"
+          strokeWidth="4"
+          animate={
+            thinking
+              ? {
+                  x: WAYPOINTS.map((p) => p[0]),
+                  y: WAYPOINTS.map((p) => p[1]),
+                  stroke: COLOR_KEYFRAMES,
+                }
+              : { x: 0, y: 0, stroke: REST_COLOR }
+          }
+          transition={thinking ? MOTION_TRANSITION : IDLE_TRANSITION}
+        />
+      </motion.g>
     </svg>
   )
 }
