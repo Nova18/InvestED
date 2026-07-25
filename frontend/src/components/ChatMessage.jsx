@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 function ConfidenceBar({ value }) {
   const pct = Math.round(value * 100)
   return (
-    <div className="flex items-center gap-2 text-xs text-slate-400">
+    <div className="flex items-center gap-2 text-xs text-slate-400 dark:text-slate-500">
       <div className="h-1 w-16 overflow-hidden rounded-full bg-mist">
         <div
           className="h-full rounded-full bg-ink-light"
@@ -29,8 +29,8 @@ export default function ChatMessage({ role, text, sources, confidence }) {
         <div
           className={
             isUser
-              ? 'rounded-2xl bg-mist px-4 py-2.5 text-slate-800'
-              : 'px-1 text-slate-800 leading-relaxed'
+              ? 'rounded-2xl bg-mist px-4 py-2.5 text-slate-800 dark:text-slate-100'
+              : 'px-1 text-slate-800 leading-relaxed dark:text-slate-100'
           }
         >
           {text}
@@ -44,7 +44,7 @@ export default function ChatMessage({ role, text, sources, confidence }) {
                 href={s.url ?? undefined}
                 target="_blank"
                 rel="noreferrer"
-                className="rounded-full border border-mist px-3 py-1 text-xs text-slate-500 transition-colors hover:border-ink-light hover:text-ink-light"
+                className="rounded-full border border-mist px-3 py-1 text-xs text-slate-500 transition-colors hover:border-ink-light hover:text-ink-light dark:text-slate-400"
               >
                 {s.title}
               </a>

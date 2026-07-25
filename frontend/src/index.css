@@ -1,8 +1,23 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
-  --color-ink: #100925;
-  --color-ink-light: #4a2f9e;
+  --color-ink: #312b91;
+  --color-ink-light: #667eea;
   --color-paper: #fafafa;
   --color-mist: #f1f0f5;
+}
+
+.dark {
+  --color-paper: #16141f;
+  --color-mist: #242034;
+}
+
+/* Smooth theme switches. Excludes fill/stroke - the logo animates those
+   itself via Framer Motion, and a competing CSS transition would fight it. */
+*,
+*::before,
+*::after {
+  transition: background-color 400ms ease, border-color 400ms ease, color 400ms ease;
 }

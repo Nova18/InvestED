@@ -2,6 +2,7 @@ import { useRef, useState } from 'react'
 import Logo from './components/Logo'
 import ChatMessage from './components/ChatMessage'
 import ChatInput from './components/ChatInput'
+import ThemeToggle from './components/ThemeToggle'
 
 async function askBackend(question) {
   const res = await fetch('/api/chat', {
@@ -49,9 +50,14 @@ function App() {
 
   return (
     <div className="flex min-h-screen flex-col bg-paper">
-      <header className="flex items-center gap-3 px-6 py-5">
-        <Logo size={43} />
-        <span className="text-xl font-semibold tracking-wide text-slate-700">InvestED</span>
+      <header className="flex items-center justify-between px-6 py-5">
+        <div className="flex items-center gap-3">
+          <Logo size={43} />
+          <span className="text-xl font-semibold tracking-wide text-slate-700 dark:text-slate-200">
+            InvestED
+          </span>
+        </div>
+        <ThemeToggle />
       </header>
 
       <main className="mx-auto flex w-full max-w-3xl flex-1 flex-col px-6">
@@ -59,10 +65,10 @@ function App() {
           <div className="flex flex-1 flex-col items-center justify-center gap-8 pb-24">
             <Logo size={90} thinking={thinking || previewThinking} />
             <div className="text-center">
-              <h1 className="text-2xl font-semibold text-slate-800">
+              <h1 className="text-2xl font-semibold text-slate-800 dark:text-slate-100">
                 What do you want to understand?
               </h1>
-              <p className="mt-2 text-slate-400">
+              <p className="mt-2 text-slate-400 dark:text-slate-500">
                 Ask about investing, retirement accounts, credit, or taxes — grounded in real sources.
               </p>
             </div>

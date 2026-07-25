@@ -14,13 +14,13 @@ export default function ChatInput({ onSend, disabled }) {
   return (
     <form
       onSubmit={handleSubmit}
-      className="flex items-center gap-3 rounded-full border border-mist bg-white px-5 py-3 shadow-sm transition-shadow focus-within:shadow-md"
+      className="flex items-center gap-3 rounded-full border border-mist bg-white px-5 py-3 shadow-sm transition-shadow focus-within:shadow-md dark:border-mist dark:bg-mist dark:shadow-none"
     >
       <input
         value={value}
         onChange={(e) => setValue(e.target.value)}
         placeholder="Ask about investing, retirement, credit..."
-        className="flex-1 bg-transparent text-slate-800 placeholder:text-slate-400 focus:outline-none"
+        className="flex-1 bg-transparent text-slate-800 placeholder:text-slate-400 focus:outline-none dark:text-slate-100 dark:placeholder:text-slate-500"
       />
       <button
         type="submit"
