@@ -49,8 +49,8 @@ function App() {
   return (
     <div className="flex min-h-screen flex-col bg-paper">
       <header className="flex items-center gap-3 px-6 py-5">
-        <Logo size={28} />
-        <span className="text-sm font-medium tracking-wide text-slate-600">InvestED</span>
+        <Logo size={44} />
+        <span className="text-xl font-semibold tracking-wide text-slate-700">InvestED</span>
       </header>
 
       <main className="mx-auto flex w-full max-w-3xl flex-1 flex-col px-6">

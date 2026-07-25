@@ -13,16 +13,21 @@ const PAD = 40 // the traveling piece pokes past the original bounds at two wayp
 const BIG_TRIANGLE = '115.181,20.2217 215.84,222.75 14.5232,222.75'
 const SMALL_TRIANGLE = '199.681,125 235.621,197 163.741,197'
 
-// Offsets (from rest) for the traveling piece's centroid: rest -> bottom-left
-// vertex -> top apex -> back to rest. The rest->bottom-left leg holds y at 0
-// (matching rest's height) so it glides flat along the bottom edge instead
-// of drifting toward the vertex's exact (lower) y-position.
+// Offsets (from rest) for the traveling piece's centroid. Rest sits near the
+// bottom-right corner, overlapping the RIGHT edge (not the bottom edge) - so
+// "glide along the bottom edge" needs a height where the piece actually
+// crosses that edge (49.75 below rest, putting the centroid on the edge
+// line itself), not rest's own height. A short first hop gets it onto that
+// height near the corner, then it glides flat, then heads up to the apex.
+const EDGE_Y = 49.75
 const WAYPOINTS = [
   [0, 0],
-  [-185.16, 0],
+  [-15, EDGE_Y],
+  [-170, EDGE_Y],
   [-84.5, -152.78],
   [0, 0],
 ]
+const TIMES = [0, 0.06, 0.33, 0.66, 1]
 
 export default function Logo({ thinking = false, size = 96, className = '' }) {
   return (
@@ -46,7 +51,7 @@ export default function Logo({ thinking = false, size = 96, className = '' }) {
         }
         transition={
           thinking
-            ? { duration: 2.4, repeat: Infinity, ease: 'easeInOut', times: [0, 0.33, 0.66, 1] }
+            ? { duration: 2.4, repeat: Infinity, ease: 'easeInOut', times: TIMES }
             : { duration: 0.5, ease: 'easeOut' }
         }
       />
