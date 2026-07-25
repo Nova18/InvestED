@@ -3,485 +3,936 @@
     "question": "What is compound growth and how does it help investing?",
     "category": "investing_basics",
     "expected_document": "Introduction to Investing",
-    "expected_keywords": ["compound", "growth"]
+    "expected_keywords": [
+      "compound",
+      "growth"
+    ],
+    "question_type": "definition"
   },
   {
     "question": "How can I manage risk when investing?",
     "category": "investing_basics",
     "expected_document": "Introduction to Investing",
-    "expected_keywords": ["risk"]
+    "expected_keywords": [
+      "risk"
+    ],
+    "question_type": "definition"
   },
   {
     "question": "What is asset allocation and diversification?",
     "category": "investing_basics",
     "expected_document": "Introduction to Investing",
-    "expected_keywords": ["asset allocation", "diversif"]
+    "expected_keywords": [
+      "asset allocation",
+      "diversif"
+    ],
+    "question_type": "definition"
   },
   {
     "question": "What's the difference between saving and investing?",
     "category": "investing_basics",
     "expected_document": "Introduction to Investing",
-    "expected_keywords": ["saving", "investing"]
+    "expected_keywords": [
+      "saving",
+      "investing"
+    ],
+    "question_type": "definition"
   },
   {
     "question": "What are some common types of investment assets?",
     "category": "investing_basics",
     "expected_document": "Introduction to Investing",
-    "expected_keywords": ["stocks", "bonds"]
+    "expected_keywords": [
+      "stocks",
+      "bonds"
+    ],
+    "question_type": "definition"
   },
   {
     "question": "Why is knowing your risk tolerance important when investing?",
     "category": "investing_basics",
     "expected_document": "Introduction to Investing",
-    "expected_keywords": ["risk tolerance"]
+    "expected_keywords": [
+      "risk tolerance"
+    ],
+    "question_type": "definition"
   },
   {
     "question": "What is a 529 plan?",
     "category": "investing_basics",
     "expected_document": "Introduction to Investing",
-    "expected_keywords": ["529 plan", "education"]
+    "expected_keywords": [
+      "529 plan",
+      "education"
+    ],
+    "question_type": "definition"
   },
   {
     "question": "Should I pay off high-interest credit card debt before investing?",
     "category": "investing_basics",
     "expected_document": "Introduction to Investing",
-    "expected_keywords": ["Pay Down High Interest Debt"]
+    "expected_keywords": [
+      "Pay Down High Interest Debt"
+    ],
+    "question_type": "definition"
   },
   {
     "question": "Who is eligible to contribute to a Roth IRA?",
     "category": "retirement",
     "expected_document": "Traditional and Roth IRAs",
-    "expected_keywords": ["taxable compensation", "modified adjusted gross income"]
+    "expected_keywords": [
+      "taxable compensation",
+      "modified adjusted gross income"
+    ],
+    "question_type": "definition"
   },
   {
     "question": "Are Roth IRA contributions tax deductible?",
     "category": "retirement",
     "expected_document": "Traditional and Roth IRAs",
-    "expected_keywords": ["deduct"]
+    "expected_keywords": [
+      "deduct"
+    ],
+    "question_type": "definition"
   },
   {
     "question": "What's the key tax difference between a Traditional and a Roth IRA?",
     "category": "retirement",
     "expected_document": "Traditional and Roth IRAs",
-    "expected_keywords": ["deduct"]
+    "expected_keywords": [
+      "deduct"
+    ],
+    "question_type": "definition"
   },
   {
     "question": "Can you contribute to an IRA at any age?",
     "category": "retirement",
     "expected_document": "Traditional and Roth IRAs",
-    "expected_keywords": ["age", "taxable compensation"]
+    "expected_keywords": [
+      "age",
+      "taxable compensation"
+    ],
+    "question_type": "definition"
   },
   {
-    "question": "Is there a penalty for withdrawing from a Traditional IRA before age 59½?",
+    "question": "Is there a penalty for withdrawing from a Traditional IRA before age 59\u00bd?",
     "category": "retirement",
     "expected_document": "Traditional and Roth IRAs",
-    "expected_keywords": ["10% tax", "early withdrawal"]
+    "expected_keywords": [
+      "10% tax",
+      "early withdrawal"
+    ],
+    "question_type": "definition"
   },
   {
     "question": "Do I have to pay taxes on qualified Roth IRA withdrawals?",
     "category": "retirement",
     "expected_document": "Traditional and Roth IRAs",
-    "expected_keywords": ["qualified distribution"]
+    "expected_keywords": [
+      "qualified distribution"
+    ],
+    "question_type": "definition"
   },
   {
     "question": "How much can I contribute to an IRA annually?",
     "category": "retirement",
     "expected_document": "Retirement Plans FAQs regarding IRAs",
-    "expected_keywords": ["contribute to all of your tradition", "annual contribution"]
+    "expected_keywords": [
+      "contribute to all of your tradition",
+      "annual contribution"
+    ],
+    "question_type": "definition"
   },
   {
     "question": "Can I roll over funds between retirement accounts?",
     "category": "retirement",
     "expected_document": "Retirement Plans FAQs regarding IRAs",
-    "expected_keywords": ["rollover", "Rollovers"]
+    "expected_keywords": [
+      "rollover",
+      "Rollovers"
+    ],
+    "question_type": "definition"
   },
   {
     "question": "What is the deadline for completing an indirect IRA rollover?",
     "category": "retirement",
     "expected_document": "Retirement Plans FAQs regarding IRAs",
-    "expected_keywords": ["60-day", "60 day"]
+    "expected_keywords": [
+      "60-day",
+      "60 day"
+    ],
+    "question_type": "definition"
   },
   {
     "question": "Can I recharacterize an IRA contribution from one type to another?",
     "category": "retirement",
     "expected_document": "Retirement Plans FAQs regarding IRAs",
-    "expected_keywords": ["recharacteriz"]
+    "expected_keywords": [
+      "recharacteriz"
+    ],
+    "question_type": "definition"
   },
   {
     "question": "Can I take money from my IRA while I'm still working?",
     "category": "retirement",
     "expected_document": "Retirement Plans FAQs regarding IRAs",
-    "expected_keywords": ["distributions from your IRA", "still working"]
+    "expected_keywords": [
+      "distributions from your IRA",
+      "still working"
+    ],
+    "question_type": "definition"
   },
   {
     "question": "Can I transfer part of my IRA to a former spouse as part of a divorce?",
     "category": "retirement",
     "expected_document": "Retirement Plans FAQs regarding IRAs",
-    "expected_keywords": ["divorce or separation instrument"]
+    "expected_keywords": [
+      "divorce or separation instrument"
+    ],
+    "question_type": "definition"
   },
   {
     "question": "Can I roll over my workplace retirement plan into an IRA?",
     "category": "retirement",
     "expected_document": "Retirement Plans FAQs regarding IRAs",
-    "expected_keywords": ["roll over my workplace retirement plan"]
+    "expected_keywords": [
+      "roll over my workplace retirement plan"
+    ],
+    "question_type": "definition"
   },
   {
     "question": "What types of plan distributions cannot be rolled over into an IRA?",
     "category": "retirement",
     "expected_document": "Retirement Plans FAQs regarding IRAs",
-    "expected_keywords": ["Required minimum distributions", "Loans treated as deemed distributions"]
+    "expected_keywords": [
+      "Required minimum distributions",
+      "Loans treated as deemed distributions"
+    ],
+    "question_type": "definition"
   },
   {
     "question": "What is a 401(k) plan?",
     "category": "retirement",
     "expected_document": "401(k) Plan Overview",
-    "expected_keywords": ["profit-sharing", "elective deferral"]
+    "expected_keywords": [
+      "profit-sharing",
+      "elective deferral"
+    ],
+    "question_type": "definition"
   },
   {
     "question": "Are 401(k) contributions taxed immediately when deferred?",
     "category": "retirement",
     "expected_document": "401(k) Plan Overview",
-    "expected_keywords": ["pre-tax", "not reflected as taxable income", "federal income tax withholding"]
+    "expected_keywords": [
+      "pre-tax",
+      "not reflected as taxable income",
+      "federal income tax withholding"
+    ],
+    "question_type": "definition"
   },
   {
     "question": "What is a safe harbor 401(k) plan?",
     "category": "retirement",
     "expected_document": "401(k) Plan Overview",
-    "expected_keywords": ["safe harbor"]
+    "expected_keywords": [
+      "safe harbor"
+    ],
+    "question_type": "definition"
   },
   {
     "question": "What is a SIMPLE 401(k) plan?",
     "category": "retirement",
     "expected_document": "401(k) Plan Overview",
-    "expected_keywords": ["SIMPLE 401"]
+    "expected_keywords": [
+      "SIMPLE 401"
+    ],
+    "question_type": "definition"
   },
   {
     "question": "Are 401(k) elective deferrals subject to vesting?",
     "category": "retirement",
     "expected_document": "401(k) Plan Overview",
-    "expected_keywords": ["vest"]
+    "expected_keywords": [
+      "vest"
+    ],
+    "question_type": "definition"
   },
   {
     "question": "What is automatic enrollment in a 401(k) plan?",
     "category": "retirement",
     "expected_document": "401(k) Plan Overview",
-    "expected_keywords": ["enroll"]
+    "expected_keywords": [
+      "enroll"
+    ],
+    "question_type": "definition"
   },
   {
     "question": "How does employer matching work in a 401(k)?",
     "category": "retirement",
     "expected_document": "401(k) Plan Overview",
-    "expected_keywords": ["match"]
+    "expected_keywords": [
+      "match"
+    ],
+    "question_type": "definition"
   },
   {
     "question": "Is there a limit on employee compensation used to calculate 401(k) contributions?",
     "category": "retirement",
     "expected_document": "401(k) Plan Overview",
-    "expected_keywords": ["compensation limit", "annual compensation"]
+    "expected_keywords": [
+      "compensation limit",
+      "annual compensation"
+    ],
+    "question_type": "definition"
   },
   {
     "question": "Are 401(k) elective deferrals subject to Social Security and Medicare taxes?",
     "category": "retirement",
     "expected_document": "401(k) Plan Overview",
-    "expected_keywords": ["Social Security", "Medicare"]
+    "expected_keywords": [
+      "Social Security",
+      "Medicare"
+    ],
+    "question_type": "definition"
   },
   {
     "question": "What is dollar-cost averaging?",
     "category": "investing_basics",
     "expected_document": "Dollar-Cost Averaging",
-    "expected_keywords": ["dollar-cost averaging", "price volatility"]
+    "expected_keywords": [
+      "dollar-cost averaging",
+      "price volatility"
+    ],
+    "question_type": "definition"
   },
   {
     "question": "How does dollar-cost averaging help avoid poor investment timing?",
     "category": "investing_basics",
     "expected_document": "Dollar-Cost Averaging",
-    "expected_keywords": ["lump-sum", "poorly timed"]
+    "expected_keywords": [
+      "lump-sum",
+      "poorly timed"
+    ],
+    "question_type": "definition"
   },
   {
     "question": "How does dollar-cost averaging compare to investing a lump sum all at once?",
     "category": "investing_basics",
     "expected_document": "Dollar-Cost Averaging",
-    "expected_keywords": ["lump sum"]
+    "expected_keywords": [
+      "lump sum"
+    ],
+    "question_type": "definition"
   },
   {
     "question": "How does dollar-cost averaging remove emotion from investing?",
     "category": "investing_basics",
     "expected_document": "Dollar-Cost Averaging",
-    "expected_keywords": ["emotional aspects of investing"]
+    "expected_keywords": [
+      "emotional aspects of investing"
+    ],
+    "question_type": "definition"
   },
   {
     "question": "How often should I invest when using a dollar-cost averaging strategy?",
     "category": "investing_basics",
     "expected_document": "Dollar-Cost Averaging",
-    "expected_keywords": ["How Often Should You Invest"]
+    "expected_keywords": [
+      "How Often Should You Invest"
+    ],
+    "question_type": "definition"
   },
   {
     "question": "How can dollar-cost averaging help if I'm unsure when to buy a stock?",
     "category": "investing_basics",
     "expected_document": "Dollar-Cost Averaging",
-    "expected_keywords": ["aren't clear on when the best time to buy"]
+    "expected_keywords": [
+      "aren't clear on when the best time to buy"
+    ],
+    "question_type": "definition"
   },
   {
     "question": "What are the three asset classes used in a three-fund portfolio?",
     "category": "portfolio_construction",
     "expected_document": "Three-Fund Portfolio",
-    "expected_keywords": ["domestic stock", "international stock"]
+    "expected_keywords": [
+      "domestic stock",
+      "international stock"
+    ],
+    "question_type": "definition"
   },
   {
     "question": "What is the 'age in bonds' rule of thumb for asset allocation?",
     "category": "portfolio_construction",
     "expected_document": "Three-Fund Portfolio",
-    "expected_keywords": ["age in bonds", "100 minus age"]
+    "expected_keywords": [
+      "age in bonds",
+      "100 minus age"
+    ],
+    "question_type": "definition"
   },
   {
     "question": "Should my international stock fund go in a taxable or tax-advantaged account?",
     "category": "portfolio_construction",
     "expected_document": "Three-Fund Portfolio",
-    "expected_keywords": ["taxable account", "tax-efficient fund placement"]
+    "expected_keywords": [
+      "taxable account",
+      "tax-efficient fund placement"
+    ],
+    "question_type": "definition"
   },
   {
     "question": "What is a lazy portfolio?",
     "category": "portfolio_construction",
     "expected_document": "Three-Fund Portfolio",
-    "expected_keywords": ["lazy portfolio", "30-40% bonds"]
+    "expected_keywords": [
+      "lazy portfolio",
+      "30-40% bonds"
+    ],
+    "question_type": "definition"
   },
   {
     "question": "How many funds does a Vanguard Target Retirement fund actually use?",
     "category": "portfolio_construction",
     "expected_document": "Three-Fund Portfolio",
-    "expected_keywords": ["four-fund"]
+    "expected_keywords": [
+      "four-fund"
+    ],
+    "question_type": "definition"
   },
   {
     "question": "What are the advantages of a three-fund index portfolio?",
     "category": "portfolio_construction",
     "expected_document": "Three-Fund Portfolio",
-    "expected_keywords": ["No manager risk", "Low turnover"]
+    "expected_keywords": [
+      "No manager risk",
+      "Low turnover"
+    ],
+    "question_type": "definition"
   },
   {
     "question": "Is a three-fund portfolio easy to rebalance?",
     "category": "portfolio_construction",
     "expected_document": "Three-Fund Portfolio",
-    "expected_keywords": ["Easy to rebalance"]
+    "expected_keywords": [
+      "Easy to rebalance"
+    ],
+    "question_type": "definition"
   },
   {
     "question": "What is a mutual fund?",
     "category": "etfs_mutual_funds",
     "expected_document": "ETFs and Mutual Funds",
-    "expected_keywords": ["SEC-registered open-end investment company", "pools money"]
+    "expected_keywords": [
+      "SEC-registered open-end investment company",
+      "pools money"
+    ],
+    "question_type": "definition"
   },
   {
     "question": "What kinds of costs do mutual fund investors pay regardless of performance?",
     "category": "etfs_mutual_funds",
     "expected_document": "ETFs and Mutual Funds",
-    "expected_keywords": ["sales charges", "management fees"]
+    "expected_keywords": [
+      "sales charges",
+      "management fees"
+    ],
+    "question_type": "definition"
   },
   {
     "question": "What fees make up a mutual fund's total annual operating expenses?",
     "category": "etfs_mutual_funds",
     "expected_document": "ETFs and Mutual Funds",
-    "expected_keywords": ["Management Fees", "Other Expenses"]
+    "expected_keywords": [
+      "Management Fees",
+      "Other Expenses"
+    ],
+    "question_type": "definition"
   },
   {
     "question": "How does tax efficiency differ between ETFs and mutual funds?",
     "category": "etfs_mutual_funds",
     "expected_document": "ETFs and Mutual Funds",
-    "expected_keywords": ["tax efficienc"]
+    "expected_keywords": [
+      "tax efficienc"
+    ],
+    "question_type": "definition"
   },
   {
     "question": "How long does it take for ETF and mutual fund trades to settle?",
     "category": "etfs_mutual_funds",
     "expected_document": "ETFs and Mutual Funds",
-    "expected_keywords": ["settle in two business days"]
+    "expected_keywords": [
+      "settle in two business days"
+    ],
+    "question_type": "definition"
   },
   {
     "question": "What do ETFs and mutual funds have in common?",
     "category": "etfs_mutual_funds",
     "expected_document": "ETFs and Mutual Funds",
-    "expected_keywords": ["SEC-registered investment com"]
+    "expected_keywords": [
+      "SEC-registered investment com"
+    ],
+    "question_type": "definition"
   },
   {
     "question": "What is a money market fund?",
     "category": "etfs_mutual_funds",
     "expected_document": "ETFs and Mutual Funds",
-    "expected_keywords": ["money market fund", "floating NAV"]
+    "expected_keywords": [
+      "money market fund",
+      "floating NAV"
+    ],
+    "question_type": "definition"
   },
   {
     "question": "What are smart-beta funds?",
     "category": "etfs_mutual_funds",
     "expected_document": "ETFs and Mutual Funds",
-    "expected_keywords": ["Smart-Beta Funds"]
+    "expected_keywords": [
+      "Smart-Beta Funds"
+    ],
+    "question_type": "definition"
   },
   {
     "question": "How should I research a mutual fund or ETF before investing?",
     "category": "etfs_mutual_funds",
     "expected_document": "ETFs and Mutual Funds",
-    "expected_keywords": ["prospectus"]
+    "expected_keywords": [
+      "prospectus"
+    ],
+    "question_type": "definition"
   },
   {
     "question": "What are the main categories mutual funds and ETFs fall into?",
     "category": "etfs_mutual_funds",
     "expected_document": "ETFs and Mutual Funds",
-    "expected_keywords": ["bond funds", "stock funds"]
+    "expected_keywords": [
+      "bond funds",
+      "stock funds"
+    ],
+    "question_type": "definition"
   },
   {
     "question": "Why might one index fund perform differently from another index fund tracking the same index?",
     "category": "etfs_mutual_funds",
     "expected_document": "ETFs and Mutual Funds",
-    "expected_keywords": ["representative sample"]
+    "expected_keywords": [
+      "representative sample"
+    ],
+    "question_type": "definition"
   },
   {
     "question": "What risk is commonly associated with money market funds?",
     "category": "etfs_mutual_funds",
     "expected_document": "ETFs and Mutual Funds",
-    "expected_keywords": ["Inflation Risk"]
+    "expected_keywords": [
+      "Inflation Risk"
+    ],
+    "question_type": "definition"
   },
   {
     "question": "What is the typical range for FICO and VantageScore credit scores?",
     "category": "credit",
     "expected_document": "Credit Score Basics",
-    "expected_keywords": ["300 to 850"]
+    "expected_keywords": [
+      "300 to 850"
+    ],
+    "question_type": "definition"
   },
   {
     "question": "Why do lenders check your credit score?",
     "category": "credit",
     "expected_document": "Credit Score Basics",
-    "expected_keywords": ["assess risk", "automate credit decisions"]
+    "expected_keywords": [
+      "assess risk",
+      "automate credit decisions"
+    ],
+    "question_type": "definition"
   },
   {
     "question": "Why might I get different credit scores from different sources?",
     "category": "credit",
     "expected_document": "Credit Score Basics",
-    "expected_keywords": ["scoring model"]
+    "expected_keywords": [
+      "scoring model"
+    ],
+    "question_type": "definition"
   },
   {
     "question": "What's the difference between a FICO Score and a VantageScore?",
     "category": "credit",
     "expected_document": "Credit Score Basics",
-    "expected_keywords": ["FICO", "VantageScore"]
+    "expected_keywords": [
+      "FICO",
+      "VantageScore"
+    ],
+    "question_type": "definition"
   },
   {
     "question": "What's the most important factor in calculating my credit score?",
     "category": "credit",
     "expected_document": "Credit Score Basics",
-    "expected_keywords": ["Payment History"]
+    "expected_keywords": [
+      "Payment History"
+    ],
+    "question_type": "definition"
   },
   {
     "question": "How does the amount of debt I owe affect my credit score?",
     "category": "credit",
     "expected_document": "Credit Score Basics",
-    "expected_keywords": ["How Much You Owe"]
+    "expected_keywords": [
+      "How Much You Owe"
+    ],
+    "question_type": "definition"
   },
   {
     "question": "Does checking my own credit report hurt my credit score?",
     "category": "credit",
     "expected_document": "Credit Score Basics",
-    "expected_keywords": ["soft credit check", "won't affect your credit scores"]
+    "expected_keywords": [
+      "soft credit check",
+      "won't affect your credit scores"
+    ],
+    "question_type": "definition"
   },
   {
     "question": "What's the difference between a hard inquiry and a soft inquiry on my credit?",
     "category": "credit",
     "expected_document": "Credit Score Basics",
-    "expected_keywords": ["hard inquir"]
+    "expected_keywords": [
+      "hard inquir"
+    ],
+    "question_type": "definition"
   },
   {
     "question": "What is a capital gain?",
     "category": "taxes",
     "expected_document": "Capital Gains and Losses",
-    "expected_keywords": ["adjusted basis", "capital gain"]
+    "expected_keywords": [
+      "adjusted basis",
+      "capital gain"
+    ],
+    "question_type": "definition"
   },
   {
     "question": "What's the difference between short-term and long-term capital gains?",
     "category": "taxes",
     "expected_document": "Capital Gains and Losses",
-    "expected_keywords": ["short-term", "long-term"]
+    "expected_keywords": [
+      "short-term",
+      "long-term"
+    ],
+    "question_type": "definition"
   },
   {
     "question": "Are capital gains taxed at a different rate than ordinary income?",
     "category": "taxes",
     "expected_document": "Capital Gains and Losses",
-    "expected_keywords": ["lower tax rate", "ordinary income"]
+    "expected_keywords": [
+      "lower tax rate",
+      "ordinary income"
+    ],
+    "question_type": "definition"
   },
   {
     "question": "Are losses on the sale of my home or car tax deductible?",
     "category": "taxes",
     "expected_document": "Capital Gains and Losses",
-    "expected_keywords": ["personal-use property"]
+    "expected_keywords": [
+      "personal-use property"
+    ],
+    "question_type": "definition"
   },
   {
     "question": "Can I carry forward a capital loss to future tax years?",
     "category": "taxes",
     "expected_document": "Capital Gains and Losses",
-    "expected_keywords": ["carry forward"]
+    "expected_keywords": [
+      "carry forward"
+    ],
+    "question_type": "definition"
   },
   {
     "question": "How much should I save in an emergency fund?",
     "category": "emergency_fund",
     "expected_document": "Emergency Fund",
-    "expected_keywords": ["three-six months", "months"]
+    "expected_keywords": [
+      "three-six months",
+      "months"
+    ],
+    "question_type": "definition"
   },
   {
     "question": "What's the difference between a spending shock and an income shock when planning an emergency fund?",
     "category": "emergency_fund",
     "expected_document": "Emergency Fund",
-    "expected_keywords": ["Spending shock", "Income shock"]
+    "expected_keywords": [
+      "Spending shock",
+      "Income shock"
+    ],
+    "question_type": "definition"
   },
   {
     "question": "What's the difference between fixed and variable monthly expenses?",
     "category": "emergency_fund",
     "expected_document": "Emergency Fund",
-    "expected_keywords": ["Fixed expenses", "variable expenses"]
+    "expected_keywords": [
+      "Fixed expenses",
+      "variable expenses"
+    ],
+    "question_type": "definition"
   },
   {
     "question": "Where should I keep money I'm saving for a spending shock vs. an income shock?",
     "category": "emergency_fund",
     "expected_document": "Emergency Fund",
-    "expected_keywords": ["money market fund", "Certificate of Deposit"]
+    "expected_keywords": [
+      "money market fund",
+      "Certificate of Deposit"
+    ],
+    "question_type": "definition"
   },
   {
     "question": "Should I invest my emergency fund savings in the stock market?",
     "category": "emergency_fund",
     "expected_document": "Emergency Fund",
-    "expected_keywords": ["may not offer the same safety"]
+    "expected_keywords": [
+      "may not offer the same safety"
+    ],
+    "question_type": "definition"
   },
   {
     "question": "What's the difference between saving for a short-term goal and a long-term goal?",
     "category": "emergency_fund",
     "expected_document": "Emergency Fund",
-    "expected_keywords": ["short-term goal", "long-term goal"]
+    "expected_keywords": [
+      "short-term goal",
+      "long-term goal"
+    ],
+    "question_type": "definition"
   },
   {
     "question": "I already have six months of emergency savings - should I invest extra money into a Roth IRA or keep building cash?",
     "category": "multi_hop",
-    "expected_documents": ["Emergency Fund", "Traditional and Roth IRAs"]
+    "expected_documents": [
+      "Emergency Fund",
+      "Traditional and Roth IRAs"
+    ],
+    "question_type": "scenario"
   },
   {
     "question": "Why might someone choose ETFs over mutual funds in a taxable account?",
     "category": "multi_hop",
-    "expected_documents": ["ETFs and Mutual Funds", "Three-Fund Portfolio"]
+    "expected_documents": [
+      "ETFs and Mutual Funds",
+      "Three-Fund Portfolio"
+    ],
+    "question_type": "scenario"
   },
   {
     "question": "If I sell a fund at a profit, how are the gains taxed, and does dollar-cost averaging affect that?",
     "category": "multi_hop",
-    "expected_documents": ["Capital Gains and Losses", "Dollar-Cost Averaging"]
+    "expected_documents": [
+      "Capital Gains and Losses",
+      "Dollar-Cost Averaging"
+    ],
+    "question_type": "scenario"
   },
   {
     "question": "Does contributing to a 401(k) reduce my taxes the same way a Traditional IRA contribution does?",
     "category": "multi_hop",
-    "expected_documents": ["401(k) Plan Overview", "Traditional and Roth IRAs"]
+    "expected_documents": [
+      "401(k) Plan Overview",
+      "Traditional and Roth IRAs"
+    ],
+    "question_type": "scenario"
   },
   {
     "question": "Should I pay off high-interest credit card debt before building my emergency fund?",
     "category": "multi_hop",
-    "expected_documents": ["Introduction to Investing", "Emergency Fund"]
+    "expected_documents": [
+      "Introduction to Investing",
+      "Emergency Fund"
+    ],
+    "question_type": "scenario"
   },
   {
     "question": "How does my credit score relate to getting approved for a loan, and should I build credit before investing?",
     "category": "multi_hop",
-    "expected_documents": ["Credit Score Basics", "Introduction to Investing"]
+    "expected_documents": [
+      "Credit Score Basics",
+      "Introduction to Investing"
+    ],
+    "question_type": "scenario"
   },
   {
     "question": "If I'm using a three-fund portfolio, which account should hold the international fund for the best tax efficiency?",
     "category": "multi_hop",
-    "expected_documents": ["Three-Fund Portfolio", "ETFs and Mutual Funds"]
+    "expected_documents": [
+      "Three-Fund Portfolio",
+      "ETFs and Mutual Funds"
+    ],
+    "question_type": "scenario"
+  },
+  {
+    "question": "Is a Roth IRA itself an investment?",
+    "category": "retirement",
+    "question_type": "misconception",
+    "expected_document": "Traditional and Roth IRAs",
+    "expected_keywords": [
+      "retirement"
+    ]
+  },
+  {
+    "question": "Is a credit score the same thing as a credit report?",
+    "category": "credit",
+    "question_type": "misconception",
+    "expected_document": "Credit Score Basics",
+    "expected_keywords": [
+      "credit report",
+      "credit score"
+    ]
+  },
+  {
+    "question": "I just opened a Roth IRA. What am I supposed to invest in?",
+    "category": "retirement",
+    "question_type": "scenario",
+    "expected_document": "ETFs and Mutual Funds"
+  },
+  {
+    "question": "I have an emergency fund already. What's the next step if I want to start investing?",
+    "category": "investing_basics",
+    "question_type": "scenario",
+    "expected_document": "Introduction to Investing"
+  },
+  {
+    "question": "Should I put my savings into a high-yield savings account or start investing?",
+    "category": "investing_basics",
+    "question_type": "comparison",
+    "expected_document": "Introduction to Investing"
+  },
+  {
+    "question": "What's the difference between an ETF and an index fund?",
+    "category": "etfs_mutual_funds",
+    "question_type": "comparison",
+    "expected_document": "ETFs and Mutual Funds"
+  },
+  {
+    "question": "Should I buy an ETF or a mutual fund inside my Roth IRA?",
+    "category": "etfs_mutual_funds",
+    "question_type": "comparison",
+    "expected_document": "ETFs and Mutual Funds"
+  },
+  {
+    "question": "Can I invest in ETFs inside a Roth IRA?",
+    "category": "retirement",
+    "question_type": "scenario",
+    "expected_document": "ETFs and Mutual Funds"
+  },
+  {
+    "question": "Do I have to pick investments after opening a Roth IRA?",
+    "category": "retirement",
+    "question_type": "misconception",
+    "expected_document": "ETFs and Mutual Funds"
+  },
+  {
+    "question": "I only have $100 to invest. Is it even worth starting?",
+    "category": "investing_basics",
+    "question_type": "scenario",
+    "expected_document": "Introduction to Investing"
+  },
+  {
+    "question": "Am I too late to start investing in my twenties?",
+    "category": "investing_basics",
+    "question_type": "scenario",
+    "expected_document": "Introduction to Investing"
+  },
+  {
+    "question": "Should I wait until the stock market drops before investing?",
+    "category": "investing_basics",
+    "question_type": "scenario",
+    "expected_document": "Dollar-Cost Averaging"
+  },
+  {
+    "question": "Is investing every paycheck a good strategy?",
+    "category": "investing_basics",
+    "question_type": "scenario",
+    "expected_document": "Dollar-Cost Averaging"
+  },
+  {
+    "question": "Is it better to invest all my money today or spread it out over time?",
+    "category": "investing_basics",
+    "question_type": "comparison",
+    "expected_document": "Dollar-Cost Averaging"
+  },
+  {
+    "question": "My employer offers a 401(k). Should I use it?",
+    "category": "retirement",
+    "question_type": "scenario",
+    "expected_document": "401(k) Plan Overview"
+  },
+  {
+    "question": "Why would I contribute to a 401(k) instead of just investing on my own?",
+    "category": "retirement",
+    "question_type": "comparison",
+    "expected_document": "401(k) Plan Overview"
+  },
+  {
+    "question": "Do I lose my employer match if I stop contributing to my 401(k)?",
+    "category": "retirement",
+    "question_type": "scenario",
+    "expected_document": "401(k) Plan Overview"
+  },
+  {
+    "question": "Is buying one ETF enough to be diversified?",
+    "category": "etfs_mutual_funds",
+    "question_type": "misconception",
+    "expected_document": "Three-Fund Portfolio"
+  },
+  {
+    "question": "If I never sell my investments, do I still owe capital gains taxes?",
+    "category": "taxes",
+    "question_type": "scenario",
+    "expected_document": "Capital Gains and Losses"
+  },
+  {
+    "question": "Do I pay taxes just because my investments increased in value?",
+    "category": "taxes",
+    "question_type": "misconception",
+    "expected_document": "Capital Gains and Losses"
+  },
+  {
+    "question": "Why is my credit score different on different websites?",
+    "category": "credit",
+    "question_type": "scenario",
+    "expected_document": "Credit Score Basics"
+  },
+  {
+    "question": "How much should I keep in an emergency fund before I start investing?",
+    "category": "emergency_fund",
+    "question_type": "scenario",
+    "expected_document": "Emergency Fund"
+  },
+  {
+    "question": "Should I build my emergency fund before contributing to a Roth IRA?",
+    "category": "multi_hop",
+    "question_type": "scenario",
+    "expected_documents": [
+      "Emergency Fund",
+      "Traditional and Roth IRAs"
+    ]
+  },
+  {
+    "question": "Can I use my Roth IRA as my emergency fund?",
+    "category": "multi_hop",
+    "question_type": "misconception",
+    "expected_documents": [
+      "Emergency Fund",
+      "Traditional and Roth IRAs"
+    ]
   }
 ]

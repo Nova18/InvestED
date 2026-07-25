@@ -3,6 +3,7 @@ from pydantic import BaseModel
 from sqlalchemy.orm import Session
 
 from app.db.session import get_db
+from app.rag.calibration import PLATT_A, PLATT_B, apply_platt_scaling
 from app.rag.generate import generate_answer
 from app.rag.retrieve import retrieve
 
@@ -39,5 +40,6 @@ def chat(request: ChatRequest, db: Session = Depends(get_db)) -> ChatResponse:
             seen_ids.add(doc.id)
             sources.append(Source(title=doc.title, source=doc.source, url=doc.url))
 
-    confidence = results[0][1] if results else 0.0
+    raw_similarity = results[0][1] if results else 0.0
+    confidence = apply_platt_scaling(raw_similarity, PLATT_A, PLATT_B)
     return ChatResponse(answer=answer, sources=sources, confidence=confidence)
