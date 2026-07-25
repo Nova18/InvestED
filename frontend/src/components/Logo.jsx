@@ -3,32 +3,73 @@ import { motion } from 'framer-motion'
 // Source geometry (236x232 viewBox). Big triangle is a fixed outline - the
 // "track." Small triangle is a fixed solid piece that never moves. A second
 // copy of the small triangle, drawn as an outline, is the animated piece:
-// while thinking, it travels from its resting spot (overlapping the solid
-// triangle, near the big triangle's bottom-right vertex) around the other
-// two vertices and back, tracing the big triangle's perimeter.
+// while thinking, it travels around the big triangle's perimeter and back.
 const VIEW_W = 236
 const VIEW_H = 232
-const PAD = 40 // the traveling piece pokes past the original bounds at two waypoints
+const PAD = 40 // the traveling piece pokes past the original bounds at several waypoints
 
-const BIG_TRIANGLE = '115.181,20.2217 215.84,222.75 14.5232,222.75'
+const APEX = [115.181, 20.2217]
+const BOTTOM_RIGHT = [215.84, 222.75]
+const BOTTOM_LEFT = [14.5232, 222.75]
+
+const BIG_TRIANGLE = `${APEX} ${BOTTOM_RIGHT} ${BOTTOM_LEFT}`
 const SMALL_TRIANGLE = '199.681,125 235.621,197 163.741,197'
+const REST = [199.681, 173] // the small triangle's centroid
 
-// Offsets (from rest) for the traveling piece's centroid. Rest sits near the
-// bottom-right corner, overlapping the RIGHT edge (not the bottom edge) - so
-// "glide along the bottom edge" needs a height where the piece actually
-// crosses that edge (49.75 below rest, putting the centroid on the edge
-// line itself), not rest's own height. A short first hop gets it onto that
-// height near the corner, then it glides flat, then heads up to the apex.
-const EDGE_Y = 49.75
+// How far outside each edge the traveling piece's centroid sits while
+// gliding along it (perpendicular distance, same for all 3 edges so the
+// gap "looks" consistent), and how far from each corner the flat part of
+// the glide starts/ends (as a fraction of the edge's length).
+const GAP = 8
+const MARGIN = 0.15
+
+// For an edge from `a` to `b`, return the two points `MARGIN`/`1-MARGIN`
+// of the way along it, each pushed `GAP` units outward (away from the
+// triangle's interior) - i.e. the entry and exit points of a segment that
+// runs exactly parallel to that edge at a constant distance from it.
+function edgeGlidePoints(a, b, interior) {
+  const d = [b[0] - a[0], b[1] - a[1]]
+  const len = Math.hypot(d[0], d[1])
+  const unit = [d[0] / len, d[1] / len]
+  // Two perpendicular candidates; keep whichever points away from the interior.
+  let normal = [-unit[1], unit[0]]
+  const towardInterior = [interior[0] - a[0], interior[1] - a[1]]
+  if (normal[0] * towardInterior[0] + normal[1] * towardInterior[1] > 0) {
+    normal = [-normal[0], -normal[1]]
+  }
+  const point = (t) => [
+    a[0] + d[0] * t + normal[0] * GAP,
+    a[1] + d[1] * t + normal[1] * GAP,
+  ]
+  return [point(MARGIN), point(1 - MARGIN)]
+}
+
+const CENTER = [
+  (APEX[0] + BOTTOM_RIGHT[0] + BOTTOM_LEFT[0]) / 3,
+  (APEX[1] + BOTTOM_RIGHT[1] + BOTTOM_LEFT[1]) / 3,
+]
+
+// Right edge only needs its entry point - its "exit" is rest itself (rest
+// already sits right by this edge, so a second computed point there tends
+// to land slightly past rest and overshoot on the final approach).
+const [rightEntry] = edgeGlidePoints(APEX, BOTTOM_RIGHT, CENTER)
+const [bottomEntry, bottomExit] = edgeGlidePoints(BOTTOM_RIGHT, BOTTOM_LEFT, CENTER)
+const [leftEntry, leftExit] = edgeGlidePoints(BOTTOM_LEFT, APEX, CENTER)
+
+const offsetFromRest = ([x, y]) => [x - REST[0], y - REST[1]]
+
+// Rest -> across the bottom edge -> up the left edge -> across the right
+// edge (which passes right by rest) -> back to rest.
 const WAYPOINTS = [
   [0, 0],
-  [-15, EDGE_Y],
-  [-170, EDGE_Y],
-  [-152.55, -60.31], // hugs the left edge outward, mirroring rest's poke past the right edge
-  [-84.5, -152.78],
+  offsetFromRest(bottomEntry),
+  offsetFromRest(bottomExit),
+  offsetFromRest(leftEntry),
+  offsetFromRest(leftExit),
+  offsetFromRest(rightEntry),
   [0, 0],
 ]
-const TIMES = [0, 0.06, 0.3, 0.48, 0.66, 1]
+const TIMES = [0, 0.06, 0.3, 0.36, 0.58, 0.64, 1]
 
 export default function Logo({ thinking = false, size = 96, className = '' }) {
   return (
@@ -52,7 +93,7 @@ export default function Logo({ thinking = false, size = 96, className = '' }) {
         }
         transition={
           thinking
-            ? { duration: 2.4, repeat: Infinity, ease: 'easeInOut', times: TIMES }
+            ? { type: 'tween', duration: 2.4, repeat: Infinity, ease: 'easeInOut', times: TIMES }
             : { duration: 0.5, ease: 'easeOut' }
         }
       />

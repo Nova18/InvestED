@@ -16,6 +16,7 @@ async function askBackend(question) {
 function App() {
   const [messages, setMessages] = useState([])
   const [thinking, setThinking] = useState(false)
+  const [previewThinking, setPreviewThinking] = useState(false)
   const bottomRef = useRef(null)
 
   async function handleSend(question) {
@@ -56,7 +57,7 @@ function App() {
       <main className="mx-auto flex w-full max-w-3xl flex-1 flex-col px-6">
         {!hasStarted ? (
           <div className="flex flex-1 flex-col items-center justify-center gap-8 pb-24">
-            <Logo size={90} thinking={thinking} />
+            <Logo size={90} thinking={thinking || previewThinking} />
             <div className="text-center">
               <h1 className="text-2xl font-semibold text-slate-800">
                 What do you want to understand?
@@ -68,6 +69,13 @@ function App() {
             <div className="w-full max-w-xl">
               <ChatInput onSend={handleSend} disabled={thinking} />
             </div>
+            <button
+              type="button"
+              onClick={() => setPreviewThinking((v) => !v)}
+              className="text-xs text-slate-300 transition-colors hover:text-slate-400"
+            >
+              {previewThinking ? 'stop' : 'preview'} thinking animation (dev)
+            </button>
           </div>
         ) : (
           <>
