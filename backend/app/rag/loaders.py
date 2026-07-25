@@ -30,7 +30,7 @@ def load_url_text(url: str) -> str:
     response = requests.get(url, headers=_REQUEST_HEADERS, timeout=10)
     response.raise_for_status()
 
-    soup = BeautifulSoup(response.text, "html.parser")
+    soup = BeautifulSoup(response.content, "html.parser")
     for tag in soup(["script", "style", "nav", "header", "footer", "aside"]):
         tag.decompose()
 
