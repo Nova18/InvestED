@@ -1,0 +1,17 @@
+[
+  {"question": "What's the best cryptocurrency to invest in right now?", "category": "unsupported_financial"},
+  {"question": "Should I day-trade options for quick profits?", "category": "unsupported_financial"},
+  {"question": "What stock should I buy tomorrow?", "category": "unsupported_financial"},
+  {"question": "Should I refinance my mortgage given current interest rates?", "category": "unsupported_financial"},
+  {"question": "How do I file for bankruptcy?", "category": "unsupported_financial"},
+  {"question": "Should I invest in NFTs?", "category": "unsupported_financial"},
+  {"question": "How do I negotiate a higher salary at my job?", "category": "unsupported_financial"},
+  {"question": "Should I buy a rental property as an investment?", "category": "unsupported_financial"},
+  {"question": "Which ETF will outperform the market next year?", "category": "unsupported_financial"},
+  {"question": "What's a good recipe for chocolate chip cookies?", "category": "unrelated"},
+  {"question": "How do I do my own home electrical wiring safely?", "category": "unrelated"},
+  {"question": "What's the weather forecast for this weekend?", "category": "unrelated"},
+  {"question": "What's a good movie to watch tonight?", "category": "unrelated"},
+  {"question": "How do I fix a flat tire?", "category": "unrelated"},
+  {"question": "What's the capital of France?", "category": "unrelated"}
+]

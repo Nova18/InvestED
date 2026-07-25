@@ -5,7 +5,8 @@ from app.db.models import Chunk
 from app.rag.embed import embed_text
 
 
-def retrieve(db: Session, query: str, top_k: int = 5) -> list[Chunk]:
+def retrieve(db: Session, query: str, top_k: int = 5) -> list[tuple[Chunk, float]]:
     query_vector = embed_text(query)
-    stmt = select(Chunk).order_by(Chunk.embedding.cosine_distance(query_vector)).limit(top_k)
-    return list(db.scalars(stmt))
+    distance = Chunk.embedding.cosine_distance(query_vector)
+    stmt = select(Chunk, distance).order_by(distance).limit(top_k)
+    return [(chunk, 1 - dist) for chunk, dist in db.execute(stmt).all()]
