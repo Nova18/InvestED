@@ -14,10 +14,12 @@ const BIG_TRIANGLE = '115.181,20.2217 215.84,222.75 14.5232,222.75'
 const SMALL_TRIANGLE = '199.681,125 235.621,197 163.741,197'
 
 // Offsets (from rest) for the traveling piece's centroid: rest -> bottom-left
-// vertex -> top apex -> back to rest.
+// vertex -> top apex -> back to rest. The rest->bottom-left leg holds y at 0
+// (matching rest's height) so it glides flat along the bottom edge instead
+// of drifting toward the vertex's exact (lower) y-position.
 const WAYPOINTS = [
   [0, 0],
-  [-185.16, 49.75],
+  [-185.16, 0],
   [-84.5, -152.78],
   [0, 0],
 ]
