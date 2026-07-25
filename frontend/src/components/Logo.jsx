@@ -1,51 +1,53 @@
 import { motion } from 'framer-motion'
 
-// Idle-state coordinates taken directly from the source logo file (538x510
-// viewBox). Each triangle also has a "mergeOffset" - how far it needs to
-// translate to sit in a perfectly tessellated (gapless) 3-row triangle grid
-// centered on the same point. Corner pieces travel much farther than inner
-// ones, which is intentional (that's what makes the "thinking" merge read
-// as pieces converging rather than just wobbling).
-const TRIANGLES = [
-  { points: '269.844,0 344.755,128.25 194.933,128.25', mergeOffset: [-1.0, 83.0] },
-  { points: '139.844,155 214.755,283.25 64.933,283.25', mergeOffset: [54.0, 56.25] },
-  { points: '272.844,297 197.933,168.75 347.755,168.75', mergeOffset: [-4.0, 42.5] },
-  { points: '405.844,155 480.755,283.25 330.933,283.25', mergeOffset: [-62.0, 56.25] },
-  { points: '75.3442,381 150.688,509.25 0,509.25', mergeOffset: [43.5, -41.5] },
-  { points: '180.844,450 105.933,321.75 255.755,321.75', mergeOffset: [13.0, 17.75] },
-  { points: '268.844,381 343.755,509.25 193.933,509.25', mergeOffset: [0, -41.5] },
-  { points: '354.844,450 279.933,321.75 429.755,321.75', mergeOffset: [-11.0, 17.75] },
-  { points: '462.344,381 537.688,509.25 387,509.25', mergeOffset: [-43.5, -41.5] },
-]
+// Source geometry (236x232 viewBox). Big triangle is a fixed outline - the
+// "track." Small triangle is a fixed solid piece that never moves. A second
+// copy of the small triangle, drawn as an outline, is the animated piece:
+// while thinking, it travels from its resting spot (overlapping the solid
+// triangle, near the big triangle's bottom-right vertex) around the other
+// two vertices and back, tracing the big triangle's perimeter.
+const VIEW_W = 236
+const VIEW_H = 232
+const PAD = 40 // the traveling piece pokes past the original bounds at two waypoints
 
-const VIEW_W = 538
-const VIEW_H = 510
+const BIG_TRIANGLE = '115.181,20.2217 215.84,222.75 14.5232,222.75'
+const SMALL_TRIANGLE = '199.681,125 235.621,197 163.741,197'
+
+// Offsets (from rest) for the traveling piece's centroid: rest -> bottom-left
+// vertex -> top apex -> back to rest.
+const WAYPOINTS = [
+  [0, 0],
+  [-185.16, 49.75],
+  [-84.5, -152.78],
+  [0, 0],
+]
 
 export default function Logo({ thinking = false, size = 96, className = '' }) {
   return (
     <svg
-      viewBox={`0 0 ${VIEW_W} ${VIEW_H}`}
+      viewBox={`${-PAD} ${-PAD} ${VIEW_W + PAD * 2} ${VIEW_H + PAD * 2}`}
       width={size}
-      height={size * (VIEW_H / VIEW_W)}
+      height={size * ((VIEW_H + PAD * 2) / (VIEW_W + PAD * 2))}
       className={className}
     >
-      {TRIANGLES.map(({ points, mergeOffset: [dx, dy] }, i) => (
-        <motion.polygon
-          key={i}
-          points={points}
-          fill="var(--color-ink)"
-          animate={
-            thinking
-              ? { x: [0, dx, 0], y: [0, dy, 0] }
-              : { x: 0, y: 0 }
-          }
-          transition={
-            thinking
-              ? { duration: 1.4, repeat: Infinity, ease: 'easeInOut' }
-              : { duration: 0.6, ease: 'easeOut' }
-          }
-        />
-      ))}
+      <polygon points={BIG_TRIANGLE} fill="none" stroke="var(--color-ink)" strokeWidth="18" />
+      <polygon points={SMALL_TRIANGLE} fill="var(--color-ink)" />
+      <motion.polygon
+        points={SMALL_TRIANGLE}
+        fill="none"
+        stroke="var(--color-ink)"
+        strokeWidth="4"
+        animate={
+          thinking
+            ? { x: WAYPOINTS.map((p) => p[0]), y: WAYPOINTS.map((p) => p[1]) }
+            : { x: 0, y: 0 }
+        }
+        transition={
+          thinking
+            ? { duration: 2.4, repeat: Infinity, ease: 'easeInOut', times: [0, 0.33, 0.66, 1] }
+            : { duration: 0.5, ease: 'easeOut' }
+        }
+      />
     </svg>
   )
 }
