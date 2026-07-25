@@ -49,14 +49,14 @@ function App() {
   return (
     <div className="flex min-h-screen flex-col bg-paper">
       <header className="flex items-center gap-3 px-6 py-5">
-        <Logo size={44} />
+        <Logo size={43} />
         <span className="text-xl font-semibold tracking-wide text-slate-700">InvestED</span>
       </header>
 
       <main className="mx-auto flex w-full max-w-3xl flex-1 flex-col px-6">
         {!hasStarted ? (
           <div className="flex flex-1 flex-col items-center justify-center gap-8 pb-24">
-            <Logo size={72} thinking={thinking} />
+            <Logo size={90} thinking={thinking} />
             <div className="text-center">
               <h1 className="text-2xl font-semibold text-slate-800">
                 What do you want to understand?
@@ -77,7 +77,7 @@ function App() {
               ))}
               {thinking && (
                 <div className="flex justify-start px-1">
-                  <Logo size={32} thinking />
+                  <Logo size={50} thinking />
                 </div>
               )}
               <div ref={bottomRef} />

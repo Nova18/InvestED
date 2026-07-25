@@ -24,10 +24,11 @@ const WAYPOINTS = [
   [0, 0],
   [-15, EDGE_Y],
   [-170, EDGE_Y],
+  [-152.55, -60.31], // hugs the left edge outward, mirroring rest's poke past the right edge
   [-84.5, -152.78],
   [0, 0],
 ]
-const TIMES = [0, 0.06, 0.33, 0.66, 1]
+const TIMES = [0, 0.06, 0.3, 0.48, 0.66, 1]
 
 export default function Logo({ thinking = false, size = 96, className = '' }) {
   return (
