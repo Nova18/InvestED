@@ -934,5 +934,161 @@
       "Emergency Fund",
       "Traditional and Roth IRAs"
     ]
+  },
+  {
+    "question": "What is a stock?",
+    "category": "investing_basics",
+    "question_type": "definition",
+    "expected_document": "Basics of Investing in Stocks",
+    "expected_keywords": [
+      "share of ownership",
+      "IPO"
+    ]
+  },
+  {
+    "question": "What drives a stock's price up or down?",
+    "category": "investing_basics",
+    "question_type": "definition",
+    "expected_document": "Basics of Investing in Stocks",
+    "expected_keywords": [
+      "earnings",
+      "profits"
+    ]
+  },
+  {
+    "question": "What's the difference between growth stocks and income stocks?",
+    "category": "investing_basics",
+    "question_type": "comparison",
+    "expected_document": "Basics of Investing in Stocks",
+    "expected_keywords": [
+      "Growth Stocks",
+      "Income Stocks"
+    ]
+  },
+  {
+    "question": "What's the difference between common and preferred stock?",
+    "category": "investing_basics",
+    "question_type": "comparison",
+    "expected_document": "Basics of Investing in Stocks",
+    "expected_keywords": [
+      "Common Stock",
+      "Preferred Stock"
+    ]
+  },
+  {
+    "question": "What is day trading?",
+    "category": "day_trading",
+    "question_type": "definition",
+    "expected_document": "Thinking About Day Trading? Know the Risks",
+    "expected_keywords": [
+      "buying and selling securities within the same day"
+    ]
+  },
+  {
+    "question": "What are the risks of day trading?",
+    "category": "day_trading",
+    "question_type": "definition",
+    "expected_document": "Thinking About Day Trading? Know the Risks",
+    "expected_keywords": [
+      "Lose Everything",
+      "leveraged"
+    ]
+  },
+  {
+    "question": "What is free-riding in a cash account?",
+    "category": "day_trading",
+    "question_type": "definition",
+    "expected_document": "Frequent Intraday Trading",
+    "expected_keywords": [
+      "free-riding",
+      "Regulation T"
+    ]
+  },
+  {
+    "question": "How much equity do I need to trade on margin?",
+    "category": "day_trading",
+    "question_type": "definition",
+    "expected_document": "Frequent Intraday Trading",
+    "expected_keywords": [
+      "$2,000"
+    ]
+  },
+  {
+    "question": "What happens if I have an intraday margin deficit?",
+    "category": "day_trading",
+    "question_type": "scenario",
+    "expected_document": "Frequent Intraday Trading",
+    "expected_keywords": [
+      "intraday margin deficit"
+    ]
+  },
+  {
+    "question": "What is a market index?",
+    "category": "investing_basics",
+    "question_type": "definition",
+    "expected_document": "Market Index",
+    "expected_keywords": [
+      "market index",
+      "market segment"
+    ]
+  },
+  {
+    "question": "What are the three major U.S. stock market indexes?",
+    "category": "investing_basics",
+    "question_type": "definition",
+    "expected_document": "Market Index",
+    "expected_keywords": [
+      "Dow Jones Industrial Average",
+      "S&P 500",
+      "Nasdaq Composite"
+    ]
+  },
+  {
+    "question": "How is a market index's value calculated?",
+    "category": "investing_basics",
+    "question_type": "definition",
+    "expected_document": "Market Index",
+    "expected_keywords": [
+      "market-cap",
+      "weighted"
+    ]
+  },
+  {
+    "question": "What is a bond?",
+    "category": "investing_basics",
+    "question_type": "definition",
+    "expected_document": "What Is a Bond",
+    "expected_keywords": [
+      "stated interest rate",
+      "issued by companies or governments"
+    ]
+  },
+  {
+    "question": "How does a bond's quality affect its interest rate?",
+    "category": "investing_basics",
+    "question_type": "definition",
+    "expected_document": "What Is a Bond",
+    "expected_keywords": [
+      "Higher-quality bonds"
+    ]
+  },
+  {
+    "question": "What's the difference between a corporate bond and a municipal bond?",
+    "category": "investing_basics",
+    "question_type": "comparison",
+    "expected_document": "What Is a Bond",
+    "expected_keywords": [
+      "Corporate bonds",
+      "Municipal bonds"
+    ]
+  },
+  {
+    "question": "Does the market value of a bond change over time?",
+    "category": "investing_basics",
+    "question_type": "definition",
+    "expected_document": "What Is a Bond",
+    "expected_keywords": [
+      "market value of a bond changes over time"
+    ]
   }
 ]
