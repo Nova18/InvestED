@@ -10,8 +10,22 @@ from app.rag.retrieve import retrieve
 router = APIRouter()
 
 
+def build_retrieval_query(question: str, history: list[dict]) -> str:
+    """Fold the most recent user turn into the search query, so a pronoun-heavy
+    follow-up ("how is that different?") still retrieves on the actual topic
+    instead of searching for those bare words with nothing to anchor them."""
+    recent_user_turns = [turn["text"] for turn in history if turn["role"] == "user"][-1:]
+    return " ".join([*recent_user_turns, question])
+
+
+class HistoryTurn(BaseModel):
+    role: str  # "user" or "assistant"
+    text: str
+
+
 class ChatRequest(BaseModel):
     question: str
+    history: list[HistoryTurn] = []
 
 
 class Source(BaseModel):
@@ -28,9 +42,11 @@ class ChatResponse(BaseModel):
 
 @router.post("/chat", response_model=ChatResponse)
 def chat(request: ChatRequest, db: Session = Depends(get_db)) -> ChatResponse:
-    results = retrieve(db, request.question, top_k=5)
+    history = [turn.model_dump() for turn in request.history]
+    retrieval_query = build_retrieval_query(request.question, history)
+    results = retrieve(db, retrieval_query, top_k=5)
     chunks = [chunk for chunk, _ in results]
-    answer = generate_answer(request.question, chunks)
+    answer = generate_answer(request.question, chunks, history=history)
 
     seen_ids: set[int] = set()
     sources = []

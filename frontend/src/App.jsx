@@ -4,11 +4,14 @@ import ChatMessage from './components/ChatMessage'
 import ChatInput from './components/ChatInput'
 import ThemeToggle from './components/ThemeToggle'
 
-async function askBackend(question) {
+async function askBackend(question, history) {
   const res = await fetch('/api/chat', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ question }),
+    body: JSON.stringify({
+      question,
+      history: history.map(({ role, text }) => ({ role, text })),
+    }),
   })
   if (!res.ok) throw new Error('Request failed')
   return res.json()
@@ -21,11 +24,12 @@ function App() {
   const bottomRef = useRef(null)
 
   async function handleSend(question) {
+    const history = messages
     setMessages((prev) => [...prev, { role: 'user', text: question }])
     setThinking(true)
 
     try {
-      const data = await askBackend(question)
+      const data = await askBackend(question, history)
       setMessages((prev) => [
         ...prev,
         {
